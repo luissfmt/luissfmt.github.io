@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="./styles/styles.css">
+  
+  <title>Mario Game with HTML/CSS/JAVASCRIPT</title>
+</head>
+<body>
+  <div id="container">
+    <img src="./assets/clouds.png" id="clouds">
+    <img src="./assets/mario.gif" id="mario">
+    <img src="./assets/pipe.png" id="pipe">
+    
+    <div id="score-container">
+      <p>SCORE</p>
+      <p id="score"></p>
+    </div>
+    
+    <p id="game-over-text" style="display: none;">
+      GAME OVER
+    </p>
+
+    <div id="game-over-screen" style="display: none;">
+      <div id="game-over-scores">
+        <p>SCORE: <span id="final-score"></span></p>
+        <p>RECORDE: <span id="highest-score"></span></p>
+      </div>
+
+      <div id="restart-button-container">
+        <button onclick="restart()">REINICIAR</button>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./scripts/script.js" defer></script>
+</body>
+</html>

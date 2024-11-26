@@ -1,0 +1,126 @@
+@font-face { font-family: SuperMario256; src: url('./SuperMario256.ttf'); } 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 15px solid rgb(35, 160, 35);
+  background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+#clouds {
+  margin-top: 90px;
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 15s infinite linear;
+}
+
+#mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+#pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation var(--pipe-speed, 1.5s) infinite linear;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+#score-container {
+  position: relative;
+  padding: 20px;
+  font-family: SuperMario256;
+  font-size: 30px;
+  color: white;
+}
+
+#game-over-text {
+  position: absolute;
+  font-family: SuperMario256;
+  color: white;
+}
+
+#game-over-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: SuperMario256;
+  font-size: 50px;
+  color: white;
+}
+
+#game-over-scores {
+  width: fit-content;
+}
+
+#restart-button-container button {
+  font-family: SuperMario256;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(35, 160, 35);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
